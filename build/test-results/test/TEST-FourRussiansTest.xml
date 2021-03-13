@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FourRussiansTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-03-13T12:01:44" hostname="DESKTOP-46U0DNJ" time="0.023">
+  <properties/>
+  <testcase name="test[0]" classname="FourRussiansTest" time="0.023"/>
+  <testcase name="test[1]" classname="FourRussiansTest" time="0.0"/>
+  <testcase name="test[2]" classname="FourRussiansTest" time="0.0"/>
+  <system-out><![CDATA[3
+3
+2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
