@@ -141,7 +141,7 @@ class Matrix(private val rows: Array<BooleanArray>) {
      *
      * @param other Second matrix.
      */
-    fun fourRussians(other: Matrix): Matrix {
+    infix fun fourRussians(other: Matrix): Matrix {
         val a = this
         val b = other
         val n = a.width
@@ -160,7 +160,6 @@ class Matrix(private val rows: Array<BooleanArray>) {
             val i = index + 1
             return if (i == m) a.width - 1 else (m - 1) * i - 1
         }
-        println(m)
         val aParts = List(m) {
             val firstIndex = firstIndex(it)
             val lastIndex = lastIndex(it)

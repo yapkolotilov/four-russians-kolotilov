@@ -24,6 +24,76 @@ class FourRussiansTest(
             return listOf(
                 Params(
                     a = Matrix(
+                        intArrayOf(1)
+                    ),
+                    b = Matrix(
+                        intArrayOf(1)
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(0)
+                    ),
+                    b = Matrix(
+                        intArrayOf(1)
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(1, 0),
+                        intArrayOf(1, 1)
+                    ),
+                    b = Matrix(
+                        intArrayOf(1, 1),
+                        intArrayOf(0, 0)
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(1, 1, 0),
+                        intArrayOf(0, 1, 1),
+                        intArrayOf(1, 1, 0),
+                    ),
+                    b = Matrix(
+                        intArrayOf(0, 0, 0),
+                        intArrayOf(1, 0, 1),
+                        intArrayOf(1, 1, 0),
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(1, 1, 0),
+                        intArrayOf(1, 0, 1),
+                        intArrayOf(1, 1, 0),
+                    ),
+                    b = Matrix(
+                        intArrayOf(0, 1, 0),
+                        intArrayOf(0, 1, 1),
+                        intArrayOf(0, 1, 0),
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(1, 0, 0, 0),
+                        intArrayOf(0, 1, 0, 0),
+                        intArrayOf(0, 0, 1, 0),
+                        intArrayOf(0, 0, 0, 1),
+                    ),
+                    b = Matrix(
+                        intArrayOf(1, 0, 1, 0),
+                        intArrayOf(1, 0, 1, 0),
+                        intArrayOf(1, 0, 1, 0),
+                        intArrayOf(1, 0, 1, 0),
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
                         intArrayOf(1, 1, 0, 0, 0),
                         intArrayOf(0, 0, 1, 1, 1),
                         intArrayOf(1, 0, 0, 1, 0),
@@ -60,12 +130,61 @@ class FourRussiansTest(
 
                 Params(
                     a = Matrix(
-                        intArrayOf(1, 0),
-                        intArrayOf(1, 1)
+                        intArrayOf(1, 1, 0, 0, 0, 1, 1, 0, 0, 1),
+                        intArrayOf(0, 0, 0, 0, 1, 1, 0, 1, 0, 1),
+                        intArrayOf(1, 0, 0, 1, 0, 0, 0, 1, 0, 0),
+                        intArrayOf(1, 0, 0, 0, 0, 1, 1, 0, 1, 0),
+                        intArrayOf(0, 0, 0, 1, 1, 1, 0, 1, 0, 0),
+                        intArrayOf(1, 1, 0, 0, 0, 0, 1, 0, 1, 1),
+                        intArrayOf(0, 0, 0, 0, 0, 1, 0, 1, 1, 0),
+                        intArrayOf(0, 1, 1, 1, 1, 1, 1, 0, 0, 0),
+                        intArrayOf(1, 0, 1, 1, 0, 0, 1, 0, 1, 0),
+                        intArrayOf(0, 1, 1, 1, 1, 0, 0, 0, 0, 1),
                     ),
                     b = Matrix(
-                        intArrayOf(1, 1),
-                        intArrayOf(0, 0)
+                        intArrayOf(1, 1, 1, 0, 0, 0, 1, 0, 1, 0),
+                        intArrayOf(0, 0, 1, 0, 0, 0, 1, 0, 1, 0),
+                        intArrayOf(0, 0, 1, 0, 0, 0, 1, 0, 1, 1),
+                        intArrayOf(0, 0, 0, 1, 1, 1, 1, 1, 0, 1),
+                        intArrayOf(1, 1, 1, 1, 0, 0, 1, 1, 0, 0),
+                        intArrayOf(1, 1, 0, 1, 1, 1, 1, 0, 0, 0),
+                        intArrayOf(0, 0, 1, 0, 1, 0, 1, 0, 1, 1),
+                        intArrayOf(1, 0, 0, 1, 0, 1, 1, 1, 1, 1),
+                        intArrayOf(0, 0, 1, 0, 1, 1, 1, 1, 0, 1),
+                        intArrayOf(1, 1, 0, 1, 1, 0, 1, 0, 0, 0)
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1),
+                        intArrayOf(0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0),
+                        intArrayOf(1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0),
+                        intArrayOf(1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1),
+                        intArrayOf(0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1),
+                        intArrayOf(1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1),
+                        intArrayOf(0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0),
+                        intArrayOf(0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1),
+                        intArrayOf(1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1),
+                        intArrayOf(0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0),
+                        intArrayOf(0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0),
+                        intArrayOf(1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1),
+                        intArrayOf(0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0),
+                    ),
+                    b = Matrix(
+                        intArrayOf(1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0),
+                        intArrayOf(0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0),
+                        intArrayOf(0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0),
+                        intArrayOf(0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0),
+                        intArrayOf(1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1),
+                        intArrayOf(1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1),
+                        intArrayOf(0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0),
+                        intArrayOf(1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1),
+                        intArrayOf(0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0),
+                        intArrayOf(1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1),
+                        intArrayOf(0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0),
+                        intArrayOf(1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1),
+                        intArrayOf(0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1),
                     )
                 ).toArray()
             )
@@ -73,7 +192,10 @@ class FourRussiansTest(
     }
 
     @Test
-    fun test() {
-        assertEquals(a * b, a.fourRussians(b))
+    fun testMultiplication() {
+        assertEquals(a * a, a fourRussians a)
+        assertEquals(b * b, b fourRussians b)
+        assertEquals(a * b, a fourRussians b)
+        assertEquals(b * a, b fourRussians a)
     }
 }
