@@ -24,24 +24,6 @@ class FourRussiansTest(
             return listOf(
                 Params(
                     a = Matrix(
-                        intArrayOf(1)
-                    ),
-                    b = Matrix(
-                        intArrayOf(1)
-                    )
-                ).toArray(),
-
-                Params(
-                    a = Matrix(
-                        intArrayOf(0)
-                    ),
-                    b = Matrix(
-                        intArrayOf(1)
-                    )
-                ).toArray(),
-
-                Params(
-                    a = Matrix(
                         intArrayOf(1, 0),
                         intArrayOf(1, 1)
                     ),
@@ -106,6 +88,40 @@ class FourRussiansTest(
                         intArrayOf(1, 1, 0, 0, 1),
                         intArrayOf(1, 0, 1, 0, 0),
                         intArrayOf(1, 1, 0, 1, 0)
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(1, 1, 0, 1, 1),
+                        intArrayOf(0, 1, 0, 1, 1),
+                        intArrayOf(0, 0, 0, 1, 1),
+                        intArrayOf(1, 0, 0, 1, 1),
+                        intArrayOf(1, 1, 0, 1, 1),
+                    ),
+                    b = Matrix(
+                        intArrayOf(1, 1, 0, 1, 1),
+                        intArrayOf(1, 0, 1, 1, 1),
+                        intArrayOf(1, 1, 0, 0, 1),
+                        intArrayOf(1, 1, 1, 0, 1),
+                        intArrayOf(1, 1, 0, 1, 1),
+                    )
+                ).toArray(),
+
+                Params(
+                    a = Matrix(
+                        intArrayOf(0, 1, 0, 1, 1),
+                        intArrayOf(1, 1, 0, 0, 1),
+                        intArrayOf(1, 1, 0, 0, 1),
+                        intArrayOf(1, 1, 0, 1, 1),
+                        intArrayOf(1, 1, 0, 1, 1),
+                    ),
+                    b = Matrix(
+                        intArrayOf(1, 1, 0, 1, 1),
+                        intArrayOf(1, 1, 0, 0, 1),
+                        intArrayOf(1, 1, 0, 0, 1),
+                        intArrayOf(0, 0, 0, 1, 1),
+                        intArrayOf(1, 1, 0, 1, 1),
                     )
                 ).toArray(),
 

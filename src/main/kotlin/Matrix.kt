@@ -160,6 +160,8 @@ class Matrix(private val rows: Array<BooleanArray>) {
             val i = index + 1
             return if (i == m) a.width - 1 else (m - 1) * i - 1
         }
+
+        // Partitions:
         val aParts = List(m) {
             val firstIndex = firstIndex(it)
             val lastIndex = lastIndex(it)
@@ -170,6 +172,8 @@ class Matrix(private val rows: Array<BooleanArray>) {
             val lastIndex = lastIndex(it)
             b.subMatrix(firstIndex..lastIndex, 0 until a.height).fillZeros(lgN, n)
         }
+
+        // Computing the result:
         var result = Matrix(n, n)
         for (i in 0 until m)
             result += aParts[i] * bParts[i]
